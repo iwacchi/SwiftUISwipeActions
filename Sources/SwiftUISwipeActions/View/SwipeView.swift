@@ -197,9 +197,9 @@ public struct SwipeView<Content: View>: View {
 }
 
 @resultBuilder
-fileprivate struct ActionBuilder {
+public struct ActionBuilder {
     
-    static func buildBlock(_ components: SwipeAction...) -> [SwipeAction] {
+    static public func buildBlock(_ components: SwipeAction...) -> [SwipeAction] {
         return components
     }
     
