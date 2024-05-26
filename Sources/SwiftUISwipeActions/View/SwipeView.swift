@@ -32,17 +32,15 @@ public struct SwipeView<Content: View>: View {
     }
     private var isLeadingSwiped: Bool {
         return scrollOffset == 0
-        // return scrollOffset > leadingActionsWidth * -1 / 3
     }
     private var isTrailingSwiped: Bool {
         return scrollOffset == -1 * (leadingActionsWidth + trailingActionsWidth)
-        //return scrollOffset < leadingActionsWidth * -1.8
     }
     private var isCentered: Bool {
         return scrollOffset == leadingActionsWidth * -1
     }
     
-    init(
+    public init(
         @ViewBuilder content: () -> Content,
         @ActionBuilder leadingActions: () -> [SwipeAction] = { [] },
         @ActionBuilder trailingActions: () -> [SwipeAction] = { [] }

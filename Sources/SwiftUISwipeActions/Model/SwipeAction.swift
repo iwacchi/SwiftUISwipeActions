@@ -24,7 +24,7 @@ public struct SwipeAction {
         return title == nil && image != nil
     }
     
-    init(
+    public init(
         title: String,
         textColor: Color,
         backgroundColor: Color,
@@ -40,7 +40,7 @@ public struct SwipeAction {
         self.action = action
     }
     
-    init(
+    public init(
         image: Image,
         textColor: Color,
         backgroundColor: Color,
@@ -56,7 +56,7 @@ public struct SwipeAction {
         self.action = action
     }
     
-    init(
+    public init(
         title: String,
         image: Image,
         textColor: Color,
